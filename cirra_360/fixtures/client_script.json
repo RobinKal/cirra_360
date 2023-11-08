@@ -1,0 +1,41 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Quality Document Group Template",
+  "enabled": 1,
+  "modified": "2022-02-01 14:23:54.425410",
+  "name": "Quality Document Group Template-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Quality Document Group Template', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Quality Document Template', {\n\tquality_document: function (frm, cdt, cdn) {\n\t\tconsole.log('test1')\n\t\tvar row = locals[cdt][cdn];\n// \t\tfrappe.db.get_value(\"Quality Document\", row.quality_document, \"subject\", (value) => {\n// \t\t\trow.subject = value.subject;\n// \t\t\trefresh_field(\"quality_documents\");\n// \t\t});\n\t\tif(row.quality_document){\n\t\t\tconsole.log('test')\n\t\t\tfrm.call({\n\t\t\t\tdoc: cur_frm.doc,\n\t\t\t\tmethod: \"get_all_dependent_document\",\n\t\t\t\targs: {parent_document_id: row.quality_document},\n\t\t\t\tfreeze: true,\n\t\t\t\tfreeze_message: __(\"Adding All Dependent Document\"),\n\t\t\t\tcallback: function(r) {\n\t\t\t\t\tif (r.message)\n\t\t\t\t\t\tfrm.reload_doc();\n\t\t\t\t\t\trefresh_field(\"quality_documents\");\n\t\t\t\t}\n\t\t\t});\n\t\t}\n\t},\n// \tquality_documents_remove:function (frm, cdt, cdn) {\n// \t\tvar row = locals[cdt][cdn];\n// \t\tlet row1 = frappe.get_doc(cdt, cdn);\n// \t\tconsole.log(row1)\n// // \t\tfrappe.db.get_value(\"Quality Document\", row.quality_document, \"subject\", (value) => {\n// // \t\t\trow.subject = value.subject;\n// // \t\t\trefresh_field(\"quality_documents\");\n// // \t\t});\n// \t\tif(row.quality_document){\n// \t\t\tconsole.log('test')\n// \t\t\tfrm.call({\n// \t\t\t\tdoc: cur_frm.doc,\n// \t\t\t\tmethod: \"remove_all_dependent_document\",\n// \t\t\t\targs: {parent_document_id: row.quality_document},\n// \t\t\t\tfreeze: true,\n// \t\t\t\tfreeze_message: __(\"Removeing All Dependent Document\"),\n// \t\t\t\tcallback: function(r) {\n// \t\t\t\t\tif (r.message)\n// \t\t\t\t\t\tfrm.reload_doc();\n// \t\t\t\t\t\trefresh_field(\"quality_documents\");\n// \t\t\t\t}\n// \t\t\t});\n// \t\t}\n// \t},\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Quality Document",
+  "enabled": 0,
+  "modified": "2022-03-10 12:32:37.792558",
+  "name": "Quality Document-List",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.listview_settings['Quality Document'] = {\r\n\tonload:function(frm){\r\n      frm.filter_area.clear();\r\n      frm.filter_area.add([[frm.doctype, \"_assign\", 'like',  '%' + frappe.session.user + '%']]);\r\n    }\r\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "File",
+  "enabled": 1,
+  "modified": "2022-03-25 13:32:36.619820",
+  "name": "File-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('File', {\n\trefresh(frm) {\n\t\t// your code here\n    \tif(frm.doc.file_name && frm.doc.file_name.split('.').splice(-1)[0]==='zip') {\n    \t\tfrm.add_custom_button(__('Unzip S3'), function() {\n    \t\t\tfrappe.call({\n    \t\t\t\tmethod: \"cirra_360.events.file.unzip_file_s3\",\n    \t\t\t\targs: {\n    \t\t\t\t\tname: frm.doc.name,\n    \t\t\t\t},\n    \t\t\t\tfreeze: true,\n    \t\t\t\tfreeze:'Processing ...',\n    \t\t\t\tcallback: function() {\n    \t\t\t\t\tfrappe.set_route('List', 'File');\n    \t\t\t\t}\n    \t\t\t});\n    \t\t});\n    \t}\n\t}\n})",
+  "view": "Form"
+ }
+]

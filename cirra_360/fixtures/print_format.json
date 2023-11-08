@@ -1,0 +1,29 @@
+[
+ {
+  "absolute_value": 0,
+  "align_labels_right": 0,
+  "css": "",
+  "custom_format": 1,
+  "default_print_language": "en",
+  "disabled": 0,
+  "doc_type": "Quality Document",
+  "docstatus": 0,
+  "doctype": "Print Format",
+  "font": "Helvetica",
+  "format_data": "[{\"fieldname\": \"print_heading_template\", \"fieldtype\": \"Custom HTML\", \"options\": \"<html>\\n<head>\\n<style>\\n#cirra {\\n  border-collapse: collapse;\\n  margin-left: auto;\\n  margin-right: auto;\\n  font-family: Century Gothic;\\n  color: #000000;\\n  letter-spacing: 2px;\\n}\\n\\n#cirra td, #cirra th {\\n  border: 1px solid #000000;\\n  padding: 8px;\\n  text-align: center;\\n}\\n.ref{\\ntext-align: left !important;\\nfont-size: 8px;\\n}\\n.first-row{\\nfont-size: 12px;\\n}\\n.second-col{\\nfont-size: 16px;\\nfont-weight: bold;\\n}\\n.second-row{\\nfont-size: 13px;\\nfont-weight: 600;\\n}\\n.third-row{\\nfont-size: 9px;\\n}\\n</style>\\n</head>\\n<body>\\n<table id=\\\"cirra\\\" style=\\\"color:#000000 !important;width:100%;font-family:Time New Roman\\\">\\n  <tr>\\n    <td class=\\\"first-row\\\" style=\\\"color:#000000 !important;\\\">LOGO Centre</td>\\n    <td class=\\\"second-col\\\" style=\\\"color:#000000 !important;\\\">Titre Proc\\u00e9dure PORTRAIT : {{doc.subject }}</td>\\n\\t<td class=\\\"ref\\\" style=\\\"color:#000000 !important;\\\">\\n    <p style=\\\"color:#000000 !important;\\\" >R\\u00e9f.Doc :{{doc.name}}</p>\\n    <p style=\\\"color:#000000 !important;\\\">Version : {{doc.version}} </p>\\n    <p style=\\\"color:#000000 !important;\\\">Date Approbation : #Date#</p>\\n</td>\\n  </tr>\\n  <tr class=\\\"second-row\\\">\\n    <td style=\\\"color:#000000 !important;\\\">REDACTEUR</td>\\n    <td style=\\\"color:#000000 !important;\\\">VERIFICATEUR</td>\\n\\t<td style=\\\"color:#000000 !important;\\\">APPROBATEUR</td>\\n  </tr>\\n  <tr class=\\\"third-row\\\">\\n    <td style=\\\"color:#000000 !important;\\\">#NOMPr\\u00e9nom# #Date#</td>\\n<td style=\\\"color:#000000 !important;\\\">#NOMPr\\u00e9nom# #Date#</td>\\n<td style=\\\"color:#000000 !important;\\\">#NOMPr\\u00e9nom# #Date#</td>\\n  </tr>\\n</table>\\n\\n</body>\\n</html>\"}, {\"fieldtype\": \"Section Break\", \"label\": \"Quality Document Details\"}, {\"fieldtype\": \"Column Break\"}, {\"fieldname\": \"quality_document\", \"print_hide\": 0, \"label\": \"Quality Document\"}]",
+  "html": "<html>\n<head>\n<style>\nhtml *\n{\n   font-family: Times New Roman !important;\n}\n#cirra {\n  border-collapse: collapse;\n  margin-left: auto;\n  margin-right: auto;\n  font-family:Times New Roman !important;\n  color: #383838;\n  letter-spacing: 2px;\n}\n\n#cirra td, #cirra th {\n  border: 1px solid #383838;\n  padding: 8px;\n  text-align: center;\n}\n.ref{\ntext-align: left !important;\nfont-size: 8px;\n}\n.first-row{\nfont-size: 12px;\n}\n.second-col{\nfont-size: 16px;\nfont-weight: bold;\n}\n.second-row{\nfont-size: 13px;\nfont-weight: 600;\n}\n.third-row{\nfont-size: 9px;\n}\n</style>\n</head>\n<body>\n<table id=\"cirra\" style=\"color:#383838 !important;width:100%;\">\n  <tr>\n    <td class=\"first-row\" style=\"color:#383838 !important;\">LOGO Centre</td>\n    <td class=\"second-col\" style=\"color:#383838 !important;\">{{doc.subject }}</td>\n\t<td class=\"ref\" style=\"color:#383838 !important;\">\n    <p style=\"color:#383838 !important;\" >R\u00e9f.Doc :{{doc.name}}</p>\n    <p style=\"color:#383838 !important;\">Version : {{doc.version}} </p>\n    <p style=\"color:#383838 !important;\">Date Approbation : #Date#</p>\n</td>\n  </tr>\n  <tr class=\"second-row\">\n    <td style=\"color:#383838 !important;\">REDACTEUR</td>\n    <td style=\"color:#383838 !important;\">VERIFICATEUR</td>\n\t<td style=\"color:#383838 !important;\">APPROBATEUR</td>\n  </tr>\n  <tr class=\"third-row\">\n    <td style=\"color:#383838 !important;\">#NOMPr\u00e9nom# #Date#</td>\n<td style=\"color:#383838 !important;\">#NOMPr\u00e9nom# #Date#</td>\n<td style=\"color:#383838 !important;\">#NOMPr\u00e9nom# #Date#</td>\n  </tr>\n</table>\n<br><br>\n\t<p>{{doc.quality_document}} </p>\n</body>\n</html>\n\n",
+  "line_breaks": 0,
+  "modified": "2022-03-08 10:00:57.947770",
+  "module": "cirra_360",
+  "name": "Cirra Quality Document",
+  "parent": "Quality Document",
+  "parentfield": null,
+  "parenttype": null,
+  "print_format_builder": 0,
+  "print_format_type": "Jinja",
+  "raw_commands": null,
+  "raw_printing": 0,
+  "show_section_headings": 0,
+  "standard": "No"
+ }
+]

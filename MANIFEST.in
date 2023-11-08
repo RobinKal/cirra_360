@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include cirra_360 *.css
+recursive-include cirra_360 *.csv
+recursive-include cirra_360 *.html
+recursive-include cirra_360 *.ico
+recursive-include cirra_360 *.js
+recursive-include cirra_360 *.json
+recursive-include cirra_360 *.md
+recursive-include cirra_360 *.png
+recursive-include cirra_360 *.py
+recursive-include cirra_360 *.svg
+recursive-include cirra_360 *.txt
+recursive-exclude cirra_360 *.pyc

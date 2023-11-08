@@ -1,0 +1,13 @@
+{
+ "creation": "2022-01-28 07:43:19.927040",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2022-01-28 07:43:19.927040",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Document",
+ "owner": "Administrator",
+ "source_name": "Quality Document",
+ "timeseries": 0
+}

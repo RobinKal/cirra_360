@@ -1,0 +1,53 @@
+{
+ "allow_roles": [
+  {
+   "role": "Quality Consultant"
+  },
+  {
+   "role": "Quality Manager"
+  },
+  {
+   "role": "quality leader"
+  },
+  {
+   "role": "All"
+  },
+  {
+   "role": "Administrator"
+  }
+ ],
+ "creation": "2022-03-16 11:51:56.028973",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://www.cirraplus.com/formation",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2022-03-24 11:04:53.193348",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Event Onboarding ",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Apprenez \u00e0 g\u00e9rer vos document qualit\u00e9   Walkthrough"
+  },
+  {
+   "step": "Make Assurez vous que les utilisateurs ont les bons droits pour contribuer"
+  },
+  {
+   "step": " apprenez quels sont les \u00e9venement \u00e0 d\u00e9clare"
+  },
+  {
+   "step": "Decouvrez comment d\u00e9clarer un \u00e9v\u00e9nement  Walkthrough"
+  },
+  {
+   "step": "Cr\u00e9ez votre premi\u00e8re t\u00e2che pour action"
+  },
+  {
+   "step": "Visualisez la totalit\u00e9 des docuements et leur status"
+  }
+ ],
+ "subtitle": "Ev\u00e9nements ,plan d\u2019action et plus",
+ "success_message": "Bravo vous \u00eates pr\u00eats \u00e0 utiliser le module qualit\u00e9 !",
+ "title": "Configurons ensemble le module Qualit\u00e9"
+}

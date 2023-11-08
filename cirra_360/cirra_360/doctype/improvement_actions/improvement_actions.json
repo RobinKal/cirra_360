@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-27 12:21:59.875534",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description_of_improvement_actions",
+  "pilot",
+  "time_limit",
+  "executed",
+  "in_progress",
+  "planned",
+  "efficiency"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "description_of_improvement_actions",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description of improvement actions"
+  },
+  {
+   "columns": 2,
+   "fieldname": "pilot",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pilot"
+  },
+  {
+   "fieldname": "time_limit",
+   "fieldtype": "Data",
+   "label": "Time limit"
+  },
+  {
+   "columns": 2,
+   "fieldname": "executed",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "executed"
+  },
+  {
+   "columns": 1,
+   "fieldname": "planned",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "planned"
+  },
+  {
+   "columns": 1,
+   "fieldname": "efficiency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Efficiency",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 2,
+   "fieldname": "in_progress",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "In progress"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-27 13:08:48.013923",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Improvement Actions",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

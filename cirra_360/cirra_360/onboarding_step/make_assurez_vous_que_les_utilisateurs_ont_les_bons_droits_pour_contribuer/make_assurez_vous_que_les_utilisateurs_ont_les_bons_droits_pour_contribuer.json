@@ -1,0 +1,18 @@
+{
+ "action": "Create Entry",
+ "creation": "2022-03-03 03:58:21.229362",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-03-24 11:04:31.466505",
+ "modified_by": "Administrator",
+ "name": "Make Assurez vous que les utilisateurs ont les bons droits pour contribuer",
+ "owner": "Administrator",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Explore quality document group",
+ "validate_action": 1
+}

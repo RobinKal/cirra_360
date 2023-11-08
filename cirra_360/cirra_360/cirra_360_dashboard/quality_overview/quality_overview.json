@@ -1,0 +1,25 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Draft Quality Document",
+   "width": "Half"
+  },
+  {
+   "chart": "Verified Quality Document",
+   "width": "Half"
+  }
+ ],
+ "creation": "2022-03-10 16:50:03.621387",
+ "dashboard_name": "Quality Overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2022-03-10 16:50:03.621387",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Overview",
+ "owner": "Administrator"
+}

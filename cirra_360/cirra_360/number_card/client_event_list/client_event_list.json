@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2022-01-26 10:52:08.602524",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Client Event",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Client Event\",\"start_date\",\"is\",\"set\",false],[\"Client Event\",\"end_date\",\"is\",\"not set\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Client Event List",
+ "modified": "2022-01-26 10:52:14.257070",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Client Event List",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
+}

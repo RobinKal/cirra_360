@@ -1,0 +1,99 @@
+[
+ {
+  "columns": [
+   {
+    "column_name": "Pending",
+    "indicator": "darkgrey",
+    "order": "[\n \"QD-2022-00021\",\n \"QD-2022-00020\",\n \"QD-2022-00018\",\n \"QD-2022-00017\",\n \"QD-2022-00027\",\n \"QD-2022-00013\",\n \"QD-2022-00028\",\n \"QD-2022-00012\",\n \"QD-2022-00025\",\n \"QD-2022-00009\",\n \"QD-2022-00029\",\n \"QD-2022-00011\",\n \"QD-2022-00024\",\n \"QD-2022-00010\",\n \"QD-2022-00026\",\n \"QD-2022-00008\",\n \"QD-2022-00007\"\n]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Approved",
+    "indicator": "darkgrey",
+    "order": "[\n \"QD-2022-00022\",\n \"QD-2022-00019\"\n]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Rejected",
+    "indicator": "darkgrey",
+    "order": "[]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Draft",
+    "indicator": "darkgrey",
+    "order": "[]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "In Progress",
+    "indicator": "darkgrey",
+    "order": "[\"QD-2022-00036\"]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "To be verified",
+    "indicator": "darkgrey",
+    "order": "[\"QD-2022-00023\"]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Verified",
+    "indicator": "darkgrey",
+    "order": "[]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Minor Edit",
+    "indicator": "darkgrey",
+    "order": "[]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Being Updated",
+    "indicator": "darkgrey",
+    "order": "[\"QD-2022-00037\"]",
+    "parent": "Quality Document Board",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "status",
+  "filters": null,
+  "kanban_board_name": "Quality Document Board",
+  "modified": "2022-02-01 14:25:23.576314",
+  "name": "Quality Document Board",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "private": 0,
+  "reference_doctype": "Quality Document"
+ }
+]

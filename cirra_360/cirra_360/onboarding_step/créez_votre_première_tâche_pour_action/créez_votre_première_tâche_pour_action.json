@@ -1,0 +1,19 @@
+{
+ "action": "Create Entry",
+ "creation": "2022-03-16 11:45:27.625214",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-03-24 11:04:45.648361",
+ "modified_by": "Administrator",
+ "name": "Cr\u00e9ez votre premi\u00e8re t\u00e2che pour action",
+ "owner": "Administrator",
+ "reference_document": "Client Event",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Cr\u00e9ation de t\u00e2che",
+ "validate_action": 1
+}

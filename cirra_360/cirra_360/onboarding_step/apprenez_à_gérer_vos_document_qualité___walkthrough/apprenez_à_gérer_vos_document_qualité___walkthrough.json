@@ -1,0 +1,19 @@
+{
+ "action": "Create Entry",
+ "creation": "2022-03-16 11:37:58.554576",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-03-17 10:18:31.140481",
+ "modified_by": "Administrator",
+ "name": "Apprenez \u00e0 g\u00e9rer vos document qualit\u00e9   Walkthrough",
+ "owner": "Administrator",
+ "reference_document": "Client Event",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "tour the quality document",
+ "validate_action": 1
+}

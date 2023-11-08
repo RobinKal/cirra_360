@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-12 06:20:31.660962",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "esr_decalre",
+  "cres_report",
+  "egis_step1",
+  "egis_step2",
+  "column_break_5",
+  "esr_link",
+  "eig_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "esr_decalre",
+   "fieldtype": "Attach",
+   "label": "ESR Decalre"
+  },
+  {
+   "fieldname": "cres_report",
+   "fieldtype": "Attach",
+   "label": "CRES Report"
+  },
+  {
+   "fieldname": "egis_step2",
+   "fieldtype": "Attach",
+   "label": "EGIS Step2"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eig_link",
+   "fieldtype": "Small Text",
+   "label": "EIG Link"
+  },
+  {
+   "fieldname": "egis_step1",
+   "fieldtype": "Attach",
+   "label": "EGIS Step 1"
+  },
+  {
+   "fieldname": "esr_link",
+   "fieldtype": "Small Text",
+   "label": "ESR Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-03-17 04:51:49.296614",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Cirra Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

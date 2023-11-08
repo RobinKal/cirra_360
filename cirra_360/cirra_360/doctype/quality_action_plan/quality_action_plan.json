@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "autoname": "PLAN-ACTION-EVT.-.####",
+ "creation": "2022-01-24 11:09:48.156048",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action_plan_name",
+  "status",
+  "start_date",
+  "end_date",
+  "column_break_3",
+  "action_plan_type",
+  "client_event",
+  "priority",
+  "section_break_5",
+  "column_break_13",
+  "section_break_16",
+  "keep_minutes_of_the_meeting"
+ ],
+ "fields": [
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nCompleted\nReady for meeting\nAction Plan Ongoing\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.action_plan_type == 'Client Event'",
+   "fieldname": "client_event",
+   "fieldtype": "Link",
+   "label": "Client Event",
+   "options": "Client Event"
+  },
+  {
+   "fieldname": "action_plan_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Action Plan Name",
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "keep_minutes_of_the_meeting",
+   "fieldtype": "Text Editor",
+   "label": "Keep minutes of the meeting"
+  },
+  {
+   "fieldname": "action_plan_type",
+   "fieldtype": "Select",
+   "label": "Action Plan Type",
+   "options": "\nClient Event\nAudits\nRisk\nSelf Evaluation"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Event And Task",
+   "link_doctype": "Client Event",
+   "link_fieldname": "quality_action_plan"
+  },
+  {
+   "group": "Event And Task",
+   "link_doctype": "Cirra Task",
+   "link_fieldname": "quality_action_plan"
+  }
+ ],
+ "modified": "2022-02-23 09:26:54.807790",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Action Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "action_plan_name",
+ "track_changes": 1
+}

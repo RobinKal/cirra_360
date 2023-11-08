@@ -1,0 +1,244 @@
+{
+ "category": "Modules",
+ "charts": [
+  {
+   "chart_name": "Quality Document Overview",
+   "label": "Quality Document Overview",
+   "width": "Half"
+  }
+ ],
+ "charts_label": "Cirra Dashboards",
+ "creation": "2022-03-16 09:33:21.234587",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Quality Cirra",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Action Plan and Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Event",
+   "link_to": "Client Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Action Plan",
+   "link_to": "Quality Action Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cirra Task",
+   "link_to": "Cirra Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cirra Link",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Documentation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Document Group",
+   "link_to": "Quality Document Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Document Group Template",
+   "link_to": "Quality Document Group Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Document",
+   "link_to": "Quality Document",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Document Cycle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  }
+ ],
+ "modified": "2022-03-24 11:03:50.178898",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Cirra",
+ "onboarding": "Event Onboarding ",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Comment d\u00e9clarer un \u00e9venement",
+   "link_to": "welcome-to-erpnext",
+   "type": "Page"
+  },
+  {
+   "doc_view": "List",
+   "label": "Mes documents",
+   "link_to": "Quality Document",
+   "stats_filter": "{\"_assign\":[\"like\",frappe.session.user]}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Mes \u00e9v\u00e9nements",
+   "link_to": "Client Event",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Mes t\u00e2ches",
+   "link_to": "Cirra Task",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "#f50707",
+   "doc_view": "List",
+   "label": "\u00c9v\u00e9nement",
+   "link_to": "Client Event",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Event Onboarding",
+   "link_to": "Module Onboarding",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Plan d'action",
+   "link_to": "Quality Action Plan",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Liste des t\u00e2ches en retard",
+   "link_to": "Cirra Task",
+   "stats_filter": "{\"status\":[\"=\",\"Overdue\"]}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "CREX \u00c9v\u00e9nement en attente",
+   "link_to": "Client Event",
+   "stats_filter": "{\"status\":[\"=\",\"Retained for Meeting\"]}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "ESRs",
+   "link_to": "Client Event",
+   "stats_filter": "{\"event_category\":[\"=\",\"Significant Radiation Protection Event (ESR)\"]}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Matrice des t\u00e2che",
+   "link_to": "Matrice des t\u00e2che",
+   "type": "Report"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "Tableau de bord qualit\u00e9",
+   "link_to": "Quality Document",
+   "type": "Dashboard"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "Tableau de bord \u00e9v\u00e9nements ind\u00e9sirables",
+   "link_to": "Event Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "Tableau de bord des t\u00e2ches",
+   "link_to": "Task Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "doc_view": "Calendar",
+   "label": "Cirra Task Calendar",
+   "link_to": "Cirra Task",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Quick Access"
+}

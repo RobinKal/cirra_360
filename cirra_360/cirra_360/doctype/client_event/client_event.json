@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "autoname": "EVT-.YYYY.-.MM.-.####",
+ "creation": "2022-01-21 07:37:21.040530",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event_name",
+  "status",
+  "event_dates_section",
+  "start_date",
+  "end_date",
+  "declaring_section",
+  "customer",
+  "column_break_12",
+  "declaring_info_name",
+  "name1",
+  "column_break_10",
+  "department",
+  "column_break_13",
+  "designation",
+  "patient_details_section",
+  "patient_name",
+  "patient_date_of_birth",
+  "column_break_1",
+  "patient_email_id",
+  "patient_phone_number",
+  "section_break_12",
+  "event_occurrence_section",
+  "event_occurrence_date",
+  "column_break_17",
+  "event_occurrence_location",
+  "section_break_18",
+  "subject",
+  "type_of_event",
+  "crex_meeting",
+  "quality_action_plan",
+  "section_break_27",
+  "event_category",
+  "sub_criteria",
+  "column_break_column",
+  "criteria_esr",
+  "criteria_details",
+  "physician",
+  "comments",
+  "section_break_35",
+  "analysis_for_meeting"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Small Text",
+   "label": "Dysfunction"
+  },
+  {
+   "fieldname": "event_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Event Dates"
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "patient_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Patient Date of Birth"
+  },
+  {
+   "fieldname": "patient_email_id",
+   "fieldtype": "Data",
+   "label": "Patient Email Id"
+  },
+  {
+   "fieldname": "patient_phone_number",
+   "fieldtype": "Data",
+   "label": "Patient Phone Number"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Event",
+   "options": "\nNon Significant\nSignificant",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.type_of_event == 'Significant'",
+   "fieldname": "event_category",
+   "fieldtype": "Select",
+   "label": "Event Category",
+   "mandatory_depends_on": "eval: doc.type_of_event == 'Significant'",
+   "options": "\nSerious adverse event (EIG)\nSignificant Radiation Protection Event (ESR)"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_occurrence_section",
+   "fieldtype": "Section Break",
+   "label": "Event Occurrence"
+  },
+  {
+   "default": "Today",
+   "fieldname": "event_occurrence_date",
+   "fieldtype": "Datetime",
+   "label": "Event Occurrence Date"
+  },
+  {
+   "fieldname": "event_occurrence_location",
+   "fieldtype": "Data",
+   "label": "Event Occurrence Location"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "declaring_info_name",
+   "fieldtype": "Link",
+   "label": "Declaring Info ID",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "declaring_info_name.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "declaring_section",
+   "fieldtype": "Section Break",
+   "label": "Declaring"
+  },
+  {
+   "fetch_from": "declaring_info_name.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "label": "Event Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nNo Analysis Required\nKept For Meeting\nTo Be Analysed\nProcessing Report\nTransmitted to ASN\nRetained for Meeting\nCompleted",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_event == \"Non Significant\"",
+   "fieldname": "crex_meeting",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "CREX Meeting",
+   "mandatory_depends_on": "eval:doc.type_of_event == \"Non Significant\"",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval: doc.event_category == 'Serious adverse event (EIG)'\n",
+   "fieldname": "sub_criteria",
+   "fieldtype": "Select",
+   "label": "Sub Criteria (EIG)",
+   "options": "\nAddictovigilance\nAMP vigilance\nBiovigilance\nH\u00e9movigilance\nInfection associ\u00e9e aux soins (IAS)\nMat\u00e9riovigilance\nPharmacovigilance :\nRadiovigilance\nR\u00e9actovigilance"
+  },
+  {
+   "depends_on": "eval: doc.event_category == 'Significant Radiation Protection Event (ESR)'\n",
+   "fieldname": "criteria_esr",
+   "fieldtype": "Link",
+   "label": "Criteria (ESR)",
+   "options": "Criteria ESR"
+  },
+  {
+   "depends_on": "eval: doc.crex_meeting == 'Yes' || doc.type_of_event == 'Significant'",
+   "fieldname": "quality_action_plan",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Quality Action Plan",
+   "mandatory_depends_on": "eval: doc.crex_meeting == 'Yes' || doc.type_of_event == 'Significant'",
+   "options": "Quality Action Plan",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "criteria_esr.criteria_details",
+   "fieldname": "criteria_details",
+   "fieldtype": "Small Text",
+   "label": "Criteria Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Si l\u2019\u00e9v\u00e8nement fait partie des \u00e9v\u00e8nements ind\u00e9sirables graves recens\u00e9s par la structure  Ex\u00a0: Choc allergique au produit de contraste non maitris\u00e9e, Urgence vitale non maitris\u00e9e, Chute grave du patient, D\u00e9c\u00e8s, mise en jeu du pronostic vital, hospitalisation, survenue d\u2019un handicap important, etc.)",
+   "depends_on": "eval: doc.event_category == 'Serious adverse event (EIG)'",
+   "fieldname": "comments",
+   "fieldtype": "Long Text",
+   "label": "Comments ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.crex_meeting == 'Yes' || doc.type_of_event == 'Significant'",
+   "fieldname": "analysis_for_meeting",
+   "fieldtype": "Text Editor",
+   "label": "Analysis for Meeting"
+  },
+  {
+   "depends_on": "eval: doc.criteria_esr == 'Crit\u00e8re 6.1\u00a0- RAN'",
+   "fieldname": "physician",
+   "fieldtype": "Link",
+   "label": "Physician",
+   "mandatory_depends_on": "eval: doc.criteria_esr == 'Crit\u00e8re 6.1\u00a0- RAN'",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "declaring_info_name.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Task",
+   "link_doctype": "Cirra Task",
+   "link_fieldname": "client_event"
+  }
+ ],
+ "modified": "2022-03-23 13:51:45.626649",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Client Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

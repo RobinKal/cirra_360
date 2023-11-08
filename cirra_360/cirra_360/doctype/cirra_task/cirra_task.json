@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CT-.YYYY.-.#####",
+ "creation": "2022-01-27 12:06:56.081068",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "start_date",
+  "end_date",
+  "owner",
+  "owner_name",
+  "column_break_4",
+  "status",
+  "priority",
+  "quality_action_plan",
+  "client_event",
+  "section_break_6",
+  "task_type",
+  "quality_document",
+  "machine",
+  "type_of_event",
+  "event_category",
+  "reference_section",
+  "action_taken",
+  "action_taken_before_date",
+  "action_taken_in_hours",
+  "hour_passed",
+  "task_type_custom",
+  "amended_from",
+  "section_break_26",
+  "download",
+  "column_break_28",
+  "submit_to",
+  "column_break_30",
+  "upload_proof"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Started\nIn Progress\nDone\nTo be Analysed\nProcessing Report\nTransmitted to ASN\nOverdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "label": "Task Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cirra Task",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.type_of_event == 'Significant'\n",
+   "fetch_from": "client_event.event_category",
+   "fieldname": "event_category",
+   "fieldtype": "Select",
+   "label": "Event Category",
+   "options": "\nSerious adverse event (EIG)\nSignificant Radiation Protection Event (ESR)"
+  },
+  {
+   "default": "Corrective action",
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "label": "Task Type",
+   "options": "\nCorrective action\nEvent"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality_action_plan",
+   "fieldtype": "Link",
+   "label": "Quality Action Plan",
+   "options": "Quality Action Plan"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "owner.employee_name",
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.task_type == 'Event'\n",
+   "fieldname": "type_of_event",
+   "fieldtype": "Select",
+   "label": "Type of Event",
+   "options": "\nNon Significant\nSignificant"
+  },
+  {
+   "depends_on": "eval: doc.task_type == 'Corrective action'\n",
+   "fieldname": "quality_document",
+   "fieldtype": "Link",
+   "label": "Quality Document",
+   "options": "Quality Document"
+  },
+  {
+   "depends_on": "eval: doc.task_type == 'Corrective action'",
+   "fieldname": "machine",
+   "fieldtype": "Data",
+   "label": "Machine"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Reference"
+  },
+  {
+   "fieldname": "client_event",
+   "fieldtype": "Link",
+   "label": "Client Event",
+   "options": "Client Event"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "label": "Action Taken",
+   "options": "Hour\nMonth"
+  },
+  {
+   "fieldname": "action_taken_before_date",
+   "fieldtype": "Date",
+   "label": "Action Taken Before Date"
+  },
+  {
+   "fieldname": "action_taken_in_hours",
+   "fieldtype": "Int",
+   "label": "Action Taken In Hours"
+  },
+  {
+   "fieldname": "hour_passed",
+   "fieldtype": "Int",
+   "label": "Hour Passed"
+  },
+  {
+   "fieldname": "task_type_custom",
+   "fieldtype": "Select",
+   "label": "Task Type Custom",
+   "options": "\nASN Submission\nCRES ASN\nEIGS2\nEIGS1"
+  },
+  {
+   "depends_on": "eval:doc.task_type == \"Event\"",
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "download",
+   "fieldtype": "Button",
+   "label": "Download"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "submit_to",
+   "fieldtype": "Button",
+   "label": "Submit To"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upload_proof",
+   "fieldtype": "Attach",
+   "label": "Upload Proof"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-24 14:15:13.132337",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Cirra Task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

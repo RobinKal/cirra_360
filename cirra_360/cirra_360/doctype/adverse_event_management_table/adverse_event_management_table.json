@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-27 12:11:43.717186",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description_of_the_ae",
+  "description_of_immediate_action",
+  "serious",
+  "crex_analysis",
+  "crex_date"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "description_of_the_ae",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description of the AE"
+  },
+  {
+   "columns": 2,
+   "fieldname": "description_of_immediate_action",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description of immediate action"
+  },
+  {
+   "columns": 1,
+   "fieldname": "serious",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Serious",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 1,
+   "fieldname": "crex_analysis",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "CREX analysis",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 2,
+   "fieldname": "crex_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "CREX date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-27 12:17:20.944762",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Adverse event management table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

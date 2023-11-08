@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{customer}-{quality_document_group_name}-{quality_document_group_type}-{#####}",
+ "creation": "2021-12-14 08:18:16.469992",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality_document_group_name",
+  "quality_document_group_type",
+  "expected_start_date",
+  "is_group",
+  "is_template",
+  "column_break_5",
+  "quality_document_group_template",
+  "status",
+  "priority",
+  "expected_end_date",
+  "customer_details_section",
+  "customer",
+  "user_details",
+  "amended_from",
+  "lft",
+  "rgt",
+  "parent_quality_document_group",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_template",
+   "fieldtype": "Check",
+   "label": "Is Template"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nOpen\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nMedium\nLow\nHigh"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "user_details",
+   "fieldtype": "Table",
+   "label": "User Details",
+   "options": "Quality User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quality Document Group",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "quality_document_group_name",
+   "fieldtype": "Data",
+   "label": "Quality Document Group Name"
+  },
+  {
+   "fieldname": "quality_document_group_type",
+   "fieldtype": "Link",
+   "label": "Quality Document Group Type",
+   "options": "Quality Document Group Type"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Quality Document Group"
+  },
+  {
+   "fieldname": "parent_quality_document_group",
+   "fieldtype": "Link",
+   "label": "Parent Quality Document Group",
+   "options": "Quality Document Group"
+  },
+  {
+   "fieldname": "quality_document_group_template",
+   "fieldtype": "Link",
+   "label": "From Template",
+   "options": "Quality Document Group Template"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2022-03-16 10:55:07.488907",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Document Group",
+ "nsm_parent_field": "parent_quality_document_group",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

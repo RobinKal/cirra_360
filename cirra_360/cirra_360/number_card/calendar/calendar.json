@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2022-01-26 10:55:11.385663",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Calendar View",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Calendar View\",\"_assign\",\"is\",\"set\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Calendar",
+ "modified": "2022-01-26 10:55:52.493205",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Calendar",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

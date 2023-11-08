@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2022-01-26 10:13:36.208650",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Quality Document",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Quality Document\",\"workflow_state\",\"=\",\"To be verified\",false],[\"Quality Document\",\"workflow_state\",\"=\",\"In Progress\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Quality Document",
+ "modified": "2022-02-23 06:33:58.609373",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Quality Document",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

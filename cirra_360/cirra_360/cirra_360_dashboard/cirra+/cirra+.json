@@ -1,0 +1,29 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Client Events",
+   "width": "Half"
+  },
+  {
+   "chart": "Quality Action Plan",
+   "width": "Half"
+  },
+  {
+   "chart": "Cirra Task",
+   "width": "Half"
+  }
+ ],
+ "creation": "2022-01-26 10:09:53.097386",
+ "dashboard_name": "Cirra+",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2022-03-23 13:57:55.247466",
+ "modified_by": "Administrator",
+ "module": "cirra_360",
+ "name": "Cirra+",
+ "owner": "Administrator"
+}
